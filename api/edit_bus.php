@@ -1,9 +1,8 @@
 <?php
 include_once "db.php";
 
-//建立新增資料用的SQL語法
-$sql="INSERT INTO `bus` (`name`, `minute`) 
- VALUES ('{$_POST['name']}', '{$_POST['minute']}')";
+//建立編輯資料用的SQL語法
+$sql="UPDATE `bus` SET `minute`='{$_POST['minute']}' WHERE `id`='{$_POST['id']}'";
 
 //執行SQL語法
 $pdo->exec($sql);
